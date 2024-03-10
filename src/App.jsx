@@ -12,7 +12,8 @@ import MasFotos from './components/routes/MasFotos'
 import FormCategoria from './components/routes/Admin/Productos/FormCategoria'
 import CategoriaLista from './components/routes/Admin/Productos/CategoriaLista'
 import FormActualizar from './components/routes/Admin/Productos/FormActualizar'
-
+import FormCaracteristica from './components/routes/Admin/Productos/FormCaracteristica'
+import CaracteristicaLista from './components/routes/Admin/Productos/CaracteristicaLista'
 
 function App() {
 
@@ -48,8 +49,8 @@ function App() {
           
           {/*Administración de características*/}
           <Route path='caracteristicas'  >
-            <Route  index element={<div>Listar características</div>} />
-            <Route path='registrar' element={<div>Registrar característica</div>} />
+            <Route  index element={<CaracteristicaLista></CaracteristicaLista>} />
+            <Route path='registrar' element={<FormCaracteristica/>} />
           </Route> 
         </Route>
 

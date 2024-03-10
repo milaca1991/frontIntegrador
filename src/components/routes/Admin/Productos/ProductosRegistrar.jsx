@@ -13,7 +13,12 @@ const ProductosRegistrar = ({ onSubmit }) => {
   const [tituloImagen, setTituloImagen] = useState("");
   const [imagenes, setImagenes] = useState([]);
   const[nombreCard,setNombreCard] = useState([])
+  const [caracteristicas, setCaracteristicas] = useState([]);
+  const [nombreCaracteristica, setNombreCaracteristica] = useState("");
+  const [iconoCaracteristica, setIconoCaracteristica] = useState("");
 
+
+//manejadores
   const handleNombreChange = (event) => {
     setNombre(event.target.value);
   };
@@ -32,7 +37,15 @@ const ProductosRegistrar = ({ onSubmit }) => {
   const handleTituloImagenChange = (event) => {
     setTituloImagen(event.target.value)
   }
+  const handleNombreCaracteristicaChange = (event) => {
+    setNombreCaracteristica(event.target.value);
+  };
 
+  const handleIconoCaracteristicaChange = (event) => {
+    setIconoCaracteristica(event.target.value);
+  };
+
+//manejador para agregar imagenes
   const handleAgregarImagen = () => {
     if (urlImagen !== "" && tituloImagen !== "") {
       const nuevaImagen = { titulo: tituloImagen, urlImg: urlImagen };
@@ -41,6 +54,26 @@ const ProductosRegistrar = ({ onSubmit }) => {
       alert("Por favor, ingrese tanto la URL como el título de la imagen.");
     }
   };
+
+
+  //manejador para agregar caracteristicas
+  const handleAgregarCaracteristica = () => {
+    if (nombreCaracteristica !== "" && iconoCaracteristica !== "") {
+      const nuevaCaracteristica = {
+        nombre: nombreCaracteristica,
+        icono: iconoCaracteristica,
+      };
+      setCaracteristicas([...caracteristicas, nuevaCaracteristica]);
+      setNombreCaracteristica("");
+      setIconoCaracteristica("");
+    } else {
+      alert("Por favor, complete tanto el nombre como el icono de la característica.");
+    }
+  };
+
+
+
+
 
   /*const handleImagenesChange = (event) => {
     const urlImagen = Array.from(event.target.urlImagen);
@@ -62,6 +95,7 @@ const ProductosRegistrar = ({ onSubmit }) => {
         urlImagen: URL.createObjectURL(imagen),
       })),*/
       categoria: categoria,
+      caracteristicas: caracteristicas,
     };
     console.log(nuevoProducto)
 
@@ -82,7 +116,7 @@ const ProductosRegistrar = ({ onSubmit }) => {
       setImagenes([]);
       setUrlmagenes(""); 
       setTituloImagen("");
-
+      setCaracteristicas([]);
   
 
     } catch (error) {
@@ -149,6 +183,8 @@ const ProductosRegistrar = ({ onSubmit }) => {
             onChange={handleCategoriaChange}
           />
         </div>
+
+      {/*agregar caracteristicas*/}
 
 
 
