@@ -49,7 +49,7 @@ function App() {
           
           {/*Administración de características*/}
           <Route path='caracteristicas'  >
-            <Route  index element={<CaracteristicaLista></CaracteristicaLista>} />
+            <Route  index element={<CaracteristicaLista/>} />
             <Route path='registrar' element={<FormCaracteristica/>} />
           </Route> 
         </Route>

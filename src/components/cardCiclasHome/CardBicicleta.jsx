@@ -7,6 +7,7 @@ import './cardCiclasHome.css'
 
 const CardBicicleta = (props) => {
 
+
   const {contexto, setContexto} = useContext(ContextGlobal);
   const [nuevosProductos, setNuevosProductos] = useState([]);
   const nuevaBici = nuevosProductos.map(producto => ({
@@ -41,40 +42,40 @@ useEffect(() => {
 
     const ciclas = [{
       nombreBici: 'Haibike Bicicleta Eléctrica Adventr FS 9',
-      imgBici: 'https://i.imgur.com/OFuVyJt.png'
+      imgBici: 'https://img.freepik.com/fotos-premium/icono-blanco-negro-bicicleta-moderna-sombra_1057389-35988.jpg?w=740'
     },{
       nombreBici: 'Wilier Bicicleta Eléctrica Triestina Hybrid GRX812',
-      imgBici: 'https://i.imgur.com/oO2sILV.png'
+      imgBici: 'https://img.freepik.com/fotos-premium/icono-blanco-negro-bicicleta-moderna-sombra_1057389-35988.jpg?w=740'
     }
     ,
     {
       nombreBici: 'Bianchi Bicicleta Eléctrica E-Spillo Classic G Altus',
-      imgBici: 'https://i.imgur.com/370InV6.png'
+      imgBici: 'https://img.freepik.com/fotos-premium/icono-blanco-negro-bicicleta-moderna-sombra_1057389-35988.jpg?w=740'
     }
     ,
     {
       nombreBici: 'Haibike Bicicleta Eléctrica MTB Alltrail',
-      imgBici: 'https://i.imgur.com/IccTsb0.png'
+      imgBici: 'https://img.freepik.com/fotos-premium/icono-blanco-negro-bicicleta-moderna-sombra_1057389-35988.jpg?w=740'
     }
     ,
     {
       nombreBici: 'Youin Bicicleta Eléctrica Plegable Dakar',
-      imgBici: 'https://i.imgur.com/kSLWt3a.png'
+      imgBici: 'https://img.freepik.com/fotos-premium/icono-blanco-negro-bicicleta-moderna-sombra_1057389-35988.jpg?w=740'
     }
     ,
     {
       nombreBici: 'Winora Bicicleta Eléctrica Tria X9 Wave',
-      imgBici: 'https://i.imgur.com/UfRt2hz.png'
+      imgBici: 'https://img.freepik.com/fotos-premium/icono-blanco-negro-bicicleta-moderna-sombra_1057389-35988.jpg?w=740'
     }
     ,
     {
       nombreBici: 'Bianchi Bicicleta Eléctrica Gravel E-Impulso Ultegra RD-R8000 2021',
-      imgBici: 'https://i.imgur.com/Ou8g9TW.png'
+      imgBici: 'https://img.freepik.com/fotos-premium/icono-blanco-negro-bicicleta-moderna-sombra_1057389-35988.jpg?w=740'
     }
     ,
     {
       nombreBici: 'Montana Bikes Bicicleta Eléctrica Carretera Gavia',
-      imgBici: 'https://i.imgur.com/fNgTMbJ.png'
+      imgBici: 'https://img.freepik.com/fotos-premium/icono-blanco-negro-bicicleta-moderna-sombra_1057389-35988.jpg?w=740'
     }];
 
     const ciclasConNuevosProductos = [...ciclas, ...nuevaBici];
@@ -85,8 +86,12 @@ useEffect(() => {
   }, [nuevosProductos]);
 
   const handleClick = (cicla) => {
-    
+
+    //esto lo inclui para que abra en ventana nueva
+    // const index = contexto.arrayCiclas.indexOf(cicla);
+    // const newWindow = window.open(`/productos/${index + 1}`, '_blank'); //hasta aca
     console.log('click handleClick CardBicicleta')
+ 
   };
   
   return (

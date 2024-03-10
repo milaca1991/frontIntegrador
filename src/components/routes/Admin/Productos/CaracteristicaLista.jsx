@@ -20,6 +20,31 @@ const CaracteristicaLista = () => {
     fetchCaracteristicas();
   }, []);
 
+
+//aun no hay metodo para eliminar
+  // const handleDeleteClick = async (caracteristicaId) => {
+  //   try {
+  //     const response = await axios.delete(`http://localhost:8080/caracteristicas/eliminar/${caracteristicaId}`);
+
+  //     if (response.status === 204) {
+  //       const updatedCaracteristicas = caracteristicas.filter(caracteristica => caracteristica.id !== caracteristicaId);
+  //       setCaracteristicas(updatedCaracteristicas);
+  //       alert('Característica eliminada correctamente.');
+  //     } else {
+  //       alert('Error al intentar eliminar la característica. Estado: ' + response.status);
+  //     }
+  //   } catch (error) {
+  //     console.error('Error deleting characteristic:', error);
+  //     alert('Error al intentar eliminar la característica. Detalles: ' + error.message);
+  //   }
+  // };
+
+
+
+
+
+
+
   return (
     <div>
       <h1>Lista de Características</h1>
@@ -42,7 +67,10 @@ const CaracteristicaLista = () => {
                 src={pathIcons.delete}
                 alt="Eliminar"
                 className="delete-icon"
-              />
+                onClick={() => handleDeleteClick(caracteristica.id)}
+        
+             
+             />
               <img
                 src={pathIcons.edit}
                 alt="Modificar"
