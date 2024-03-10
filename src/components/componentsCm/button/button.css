@@ -1,0 +1,97 @@
+
+.container-admin{
+
+    width: 80%;
+    height: 10vh;
+    background-color: rgba(255, 255, 255, 1);
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: start;
+    margin: 0 auto; 
+    margin-bottom: 30px;
+    
+    
+    }
+    
+    .iconButton {
+
+        width: 30px;
+        height: 30px;
+        margin-left: 10px;
+    }
+
+      /*estilos  entre 768 y 1023*/
+  @media (min-width: 768px) and (max-width: 1023px) {
+
+    .iconButton {
+
+        width: 20px;
+        height: 20px;
+        margin-left: 10px;
+    }
+  }
+
+
+
+    
+  /* Estilos  entre 377 y 676 */
+  @media (min-width: 377px) and (max-width: 767px) {
+
+
+    .iconButton {
+
+        width: 30px;
+        height: 30px;
+   
+    }
+
+  }
+
+
+
+
+    /* Estilos entre 321 y 376 */
+    @media (min-width: 321px) and (max-width: 376px)  {
+
+        .container-admin{
+
+            display: flex;
+            flex-direction: column;
+            height: 13vh;
+            padding: 1%;
+    
+            }
+        .iconButton {
+
+            width: 10px;
+            height: 10px;
+            margin-left: 10px;
+        }
+
+    }
+          /*estilos en 320*/
+    
+    @media (max-width: 320px) {
+
+
+        .container-admin{
+
+        display: flex;
+        flex-direction: column;
+        height: 12vh;
+        padding: 1%;
+
+
+        }
+        .iconButton {
+
+            width: 14px;
+            height: 14px;
+    
+        }
+    
+    }
+    
+    
