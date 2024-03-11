@@ -193,19 +193,47 @@ div.detalle-descripcion-producto{
 
   }
 
-  div.detalle-izquierda-card,
-  div.detalle-descripcion-producto,
-  div.caracteristicas-container {
+  div.detalle-descripcion-producto{
+
+    height: 20vh;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    overflow:auto;
+  }
+
+  h2{
+    margin: 0%;
+
+  }
+
+
+
+.tituloCaracteristicas{
+  overflow: hidden;
+}
+
+  div.detalle-izquierda-card {
     width: 100%;
     box-sizing: border-box;
     padding: 10px;
     height: 35vh;
+    
+  }
+  div.caracteristicas-container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    height: 25vh;
+    display: flex;
 
   }
 
   .detalle-izquierda-card {
     height: auto;
   }
+
+
 
   .detalle-descripcion-producto {
     margin-top: 10px;
@@ -221,14 +249,11 @@ div.detalle-descripcion-producto{
 
   .button.button.button-detalle {
     width: 100%;
- 
+    height: 20px;
     font-size: 10px;
   }
   
-  .detalle-producto-overlay {
-    overflow: auto;
 
-  }
   
   .container-big-item {
     display: flex;
@@ -238,10 +263,23 @@ div.detalle-descripcion-producto{
 
 p{
 font-size: 10px;
+margin: 0%;
 
   }
   .detalle-producto-card{
 
     height: 70vh;
+  }
+
+  span.titulo-nombre-bici{
+font-size: 10px;
+    
+  }
+
+  img.imagen-Detalle-Producto{
+
+    width: 100px;
+    height: 300px;
+
   }
 }

@@ -94,6 +94,7 @@ const DetalleProducto = () => {
           
 
               {/* Mostrar las características */}
+              {/* <div className='tituloCaracteristicas'><h2>Características</h2>  </div> */}
               <div className="caracteristicas-container">
                 <div className='tituloCaracteristicas'><h2>Características</h2>  </div>
                 
