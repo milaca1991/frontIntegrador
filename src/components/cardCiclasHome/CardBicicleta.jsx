@@ -40,6 +40,11 @@ useEffect(() => {
       imgBici: producto.imagenes[0].urlImg
     }));
 
+
+
+
+    
+
     const ciclas = [{
       nombreBici: 'Haibike Bicicleta Eléctrica Adventr FS 9',
       imgBici: 'https://img.freepik.com/fotos-premium/icono-blanco-negro-bicicleta-moderna-sombra_1057389-35988.jpg?w=740'
@@ -89,7 +94,7 @@ useEffect(() => {
 
     //esto lo inclui para que abra en ventana nueva
     // const index = contexto.arrayCiclas.indexOf(cicla);
-    // const newWindow = window.open(`/productos/${index + 1}`, '_blank'); //hasta aca
+    //const newWindow = window.open(`/productos/${index + 1}`, '_blank'); //hasta aca
     console.log('click handleClick CardBicicleta')
  
   };
@@ -99,7 +104,9 @@ useEffect(() => {
       <h3 className='titulos'>Recomendaciones</h3>
       <div className='div-card-producto'>
         {ciclaleatoria.map((cicla, index) => (
-          <Link to={'/productos/' + (+index + 1)} key={index}>
+           <Link to={'/productos/' + (+index + 1)} key={index}>
+            {/*esta es la nueva ruta que estoy trabajando para que se abra en ventana nueva*/ }
+            {/* <Link to={`/detalle2/${index + 1}`} key={index}> */}
           <article className='card-producto-home'  onClick={() => handleClick(cicla)}>
             <img className='image-ciclas-home' src={cicla.imgBici} alt={cicla.nombreBici} />
             <span>{cicla.nombreBici}</span>

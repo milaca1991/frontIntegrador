@@ -14,6 +14,8 @@ import CategoriaLista from './components/routes/Admin/Productos/CategoriaLista'
 import FormActualizar from './components/routes/Admin/Productos/FormActualizar'
 import FormCaracteristica from './components/routes/Admin/Productos/FormCaracteristica'
 import CaracteristicaLista from './components/routes/Admin/Productos/CaracteristicaLista'
+import Detalle2 from './components/routes/detalle2'
+
 
 function App() {
 
@@ -57,6 +59,7 @@ function App() {
         {/*Detalle de producto*/}
         <Route path='/productos/:id' element={<DetalleProducto/>} />
         <Route path='/masFotos' element={<MasFotos/>}/>
+        <Route path='/detalle2/:id' element={<Detalle2 />} />
 
         {/*Rutas no encontradas*/}
         <Route path='*' element={

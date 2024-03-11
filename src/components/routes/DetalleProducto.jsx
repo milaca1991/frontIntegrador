@@ -12,7 +12,6 @@ const DetalleProducto = () => {
 
 
   const {contexto} = useContext(ContextGlobal);
-
   const {id} = useParams();
   const url =  urlBackend + 'productos/' + id;
   console.log(url);
@@ -87,7 +86,8 @@ const DetalleProducto = () => {
               <p>Cuadro: Monoscocca Carbon <br /> Horquilla: Monoscocca Carbon
                 <br />  Cuadro: Monoscocca Carbon <br /> Horquilla: Monoscocca Carbon
                 <br />  Cuadro: Monoscocca Carbon <br /> Horquilla: Monoscocca Carbon
-                <br />  Cuadro: Monoscocca Carbon <br /> Horquilla: Monoscocca Carbon</p>
+                <br />  Cuadro: Monoscocca Carbon <br /> 
+                Horquilla: Monoscocca Carbon</p>
               <p>Cuadro: Monoscocca Carbon <br /> Horquilla: Monoscocca Carbon</p>
               <p>Cuadro: Monoscocca Carbon <br /> Horquilla: Monoscocca Carbon</p>
             </div>
@@ -95,11 +95,15 @@ const DetalleProducto = () => {
 
               {/* Mostrar las características */}
               <div className="caracteristicas-container">
+                <div className='tituloCaracteristicas'><h2>Características</h2>  </div>
+                
               {caracteristicas.map(caracteristica => (
+                <div className='container-big-item'>
                 <div key={caracteristica.id} className="caracteristica-item">
-                  <img src={caracteristica.icono} alt="Icono" className="caracteristica-icon" />
                   <p>{caracteristica.nombre}</p>
-                </div>
+                  <img src={caracteristica.icono} alt="Icono" className="caracteristica-icon" />
+                      </div>
+                     </div>
               ))}
             </div>
 

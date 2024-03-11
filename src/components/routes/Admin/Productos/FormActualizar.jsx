@@ -35,7 +35,7 @@ const FormActualizar = ({ onUpdate, producto }) => {
 
       setCategoria(categoria.titulo);
       setNombre(categoria.nombre);
-      setDescripcion(categoria.descripcion);
+      // setDescripcion(categoria.descripcion);
     } catch (error) {
       console.error("Error al obtener la categoría:", error);
     }
@@ -86,10 +86,10 @@ const FormActualizar = ({ onUpdate, producto }) => {
 
   const actualizarProducto = async () => {
     const productoActualizado = {
-      id: 1,     //id,
-      nombre: "bici6",   //nombre,
-      descripcion:  "prueba" ,  //descripcion,
-      categoria: "cat2", //categoria.titulo,
+      id: id,
+      nombre: nombre,
+      descripcion: descripcion,
+      categoria:categoria,
     };
   
     try {
@@ -163,7 +163,7 @@ const FormActualizar = ({ onUpdate, producto }) => {
             onChange={handleUrlImagenChange}
           />
         </div> */}
-        <button type="submit" onClick={actualizarProducto}>
+        <button type="submit" >
           Actualizar producto
         </button>
       </form>
