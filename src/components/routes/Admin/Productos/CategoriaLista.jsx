@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { pathIcons } from '../../../utils/global.context';
-
+import './CategoriaLista.css'
 
 //lsita las categorias
 const CategoriaLista = () => {
@@ -41,8 +41,8 @@ const CategoriaLista = () => {
         {categorias.map(categoria => (
           <li key={categoria.id} className="producto-item">
 
-            <div className='nombre-prod'> <p>{categoria.id}</p></div>
-            <div className='nombre-prod'><p> {categoria.titulo}</p></div>
+            <div className='nombre-prod'> <p className="producto-id">{categoria.id}</p></div>
+            <div className='nombre-prod'><p className="producto-id"> {categoria.titulo}</p></div>
             {/* <p>{categoria.descripcion}</p> */}
             {/* <img src={categoria.imagen} alt="" className='card-categoria'/> */}
                     <div>               
