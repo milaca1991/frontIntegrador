@@ -196,8 +196,8 @@ const obtenerCategoria = async (categoriaId) => {
                 <li key={producto.id} className="producto-item">
 
       
-                  <div>  <p className="producto-id"> {producto.id}</p></div>
-                  <div> <h2 className="producto-nombre"> {producto.nombre}</h2></div>
+                  <div className='nombre-prod'>  <p className="producto-id"> {producto.id}</p></div>
+                  <div className='nombre-prod'> <h2 className="producto-nombre"> {producto.nombre}</h2></div>
                     {/* <p className="producto-descripcion">DESCRIPCION: {producto.descripcion}</p>*/}
                     <div> <p className="producto-categoria"> {producto.categoria.titulo}</p> </div>
                

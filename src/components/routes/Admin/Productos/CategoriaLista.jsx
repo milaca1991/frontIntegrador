@@ -41,8 +41,8 @@ const CategoriaLista = () => {
         {categorias.map(categoria => (
           <li key={categoria.id} className="producto-item">
 
-            <div> <p>{categoria.id}</p></div>
-            <div><p> {categoria.titulo}</p></div>
+            <div className='nombre-prod'> <p>{categoria.id}</p></div>
+            <div className='nombre-prod'><p> {categoria.titulo}</p></div>
             {/* <p>{categoria.descripcion}</p> */}
             {/* <img src={categoria.imagen} alt="" className='card-categoria'/> */}
                     <div>               
